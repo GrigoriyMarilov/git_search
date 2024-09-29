@@ -85,6 +85,9 @@ export default {
           if (!res.ok) return null;
           return res.json();
         });
+      } catch (error) {
+        console.error("Error fetching repository:", error);
+        this.repository = null;
       } finally {
         this.isLoading = false;
       }
