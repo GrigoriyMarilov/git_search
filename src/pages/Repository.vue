@@ -91,6 +91,8 @@ export default {
       } finally {
         this.isLoading = false;
       }
+    } else {
+      this.repository = this.storedRepository;
     }
   },
 
